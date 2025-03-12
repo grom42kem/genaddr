@@ -7,6 +7,7 @@ A fast and flexible Ethereum address generator with pattern matching capabilitie
 - Advanced pattern-based address generation
 - Support for multiple patterns
 - Complex pattern matching with multiple wildcards
+- Special character support for digits and letters
 - Multi-threaded processing
 - Real-time statistics
 - Continuous search mode
@@ -32,9 +33,19 @@ genaddr.exe [options]
     - `123*321` : address starts with "123" and ends with "321"
     - `1*2*3*4` : address contains "1", "2", "3", "4" in sequence
     - `*dead*beef*` : address contains "dead" followed by "beef"
+  - Special characters:
+    - `#` : matches any digit (0-9)
+    - `@` : matches any letter (a-f)
+    Examples:
+    - `###*` : starts with any three digits
+    - `@@@*` : starts with any three letters
+    - `#@#@*` : starts with alternating digit and letter
+    - `*###` : ends with any three digits
+    - `##@@##*` : starts with two digits, then two letters, then two digits
   - Multiple patterns:
     - `123*,*456,*789*` : matches any of these patterns
     - `dead*,*cafe*,babe*` : matches addresses starting with "dead" OR containing "cafe" OR starting with "babe"
+    - `###*,@@@*` : matches addresses starting with either three digits OR three letters
 - `-workers int` (default: 4)
   - Number of worker goroutines
 - `-continue`
@@ -56,14 +67,14 @@ genaddr.exe -pattern "dead*beef"
 genaddr.exe -pattern "cafe*,*dead*,*babe" -workers 8 -continue -output results.txt
 ```
 
-3. Find an address with sequential numbers:
+3. Find an address starting with three digits followed by a letter:
 ```bash
-genaddr.exe -pattern "1*2*3*4*5" -workers 4
+genaddr.exe -pattern "###@*" -workers 4
 ```
 
-4. Complex pattern matching:
+4. Find an address with alternating digits and letters at start:
 ```bash
-genaddr.exe -pattern "aa*bb*cc" -workers 8
+genaddr.exe -pattern "#@#@#@*" -workers 8
 ```
 
 ## Output Format
@@ -86,6 +97,7 @@ Private Key: 0x456...
    - Prefix patterns (`123*`) are faster than contains patterns (`*123*`)
    - Complex patterns with multiple wildcards (`1*2*3*4`) take longer to match
    - Using multiple patterns increases search time proportionally
+   - Special characters (`#` and `@`) are as fast as exact character matches
 
 ## Security Note
 
@@ -98,6 +110,6 @@ Private Key: 0x456...
 - Written in Go
 - Uses ethereum-go libraries for key generation
 - Thread-safe statistics tracking
-- Advanced pattern matching algorithm
+- Advanced pattern matching algorithm with special character support
 - Support for multiple simultaneous patterns
 - Real-time performance monitoring 
