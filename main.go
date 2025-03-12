@@ -66,6 +66,13 @@ Examples:
   genaddr -pattern "dead*beef"
   genaddr -pattern "*cafe*,*babe*" -workers 8 -continue -output results.txt
   genaddr -pattern "1*2*3*4" -workers 4
+
+GitHub Repository:
+  https://github.com/grom42kem/genaddr
+
+Support the Project:
+  If you find this tool useful, you can support its development by sending donations to:
+  0x77777777b487e2FD60F3C60B080E03e7247338f6
 `
 
 func main() {

@@ -112,4 +112,16 @@ Private Key: 0x456...
 - Thread-safe statistics tracking
 - Advanced pattern matching algorithm with special character support
 - Support for multiple simultaneous patterns
-- Real-time performance monitoring 
+- Real-time performance monitoring
+
+## GitHub Repository
+
+Find the latest version and contribute to the project at:
+https://github.com/grom42kem/genaddr
+
+## Support the Project
+
+If you find this tool useful, you can support its development by sending donations to:
+`0x77777777b487e2FD60F3C60B080E03e7247338f6`
+
+Thank you for your support! 
