@@ -122,6 +122,6 @@ https://github.com/grom42kem/genaddr
 ## Support the Project
 
 If you find this tool useful, you can support its development by sending donations to:
-`0x77777777b487e2FD60F3C60B080E03e7247338f6`
+[0x77777777b487e2FD60F3C60B080E03e7247338f6](https://etherscan.io/address/0x77777777b487e2FD60F3C60B080E03e7247338f6) ❤️
 
 Thank you for your support! 
