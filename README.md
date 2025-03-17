@@ -122,6 +122,20 @@ Private Key: 0x456...
 - Support for multiple simultaneous patterns
 - Real-time performance monitoring
 
+## Stats
+
+1. Apple Silicon M4 10C
+    - 10 workers: `Speed: 178030.98 addr/sec`
+    - 1 worker: `Speed: 33746.90 addr/sec`
+
+2. Apple Silicon M1 Max 10C
+    - 10 workers: `Speed: 153807.31 addr/sec`
+    - 1 worker: `Speed: 21421.31 addr/sec`
+
+3. Intel i9 10900k
+    - 10 workers: `Speed: 226484.17 addr/sec`
+    - 1 worker: `Speed: 34266.60 addr/sec`
+
 ## GitHub Repository
 
 Find the latest version and contribute to the project at:
@@ -133,23 +147,3 @@ If you find this tool useful, you can support its development by sending donatio
 [0x77777777b487e2FD60F3C60B080E03e7247338f6](https://etherscan.io/address/0x77777777b487e2FD60F3C60B080E03e7247338f6) ❤️
 
 Thank you for your support! 
-
-## Stats
-
-Apple Silicon M4 10C
-10 workers:
-`Speed: 178030.98 addr/sec`
-1 worker:
-`Speed: 33746.90 addr/sec`
-
-Apple Silicon M1 Max 10
-10 workers:
-`Speed: 153807.31 addr/sec`
-1 worker:
-`Speed: 21421.31 addr/sec`
-
-Intel i9 10900k
-10 workers:
-`Speed: 226484.17 addr/sec`
-1 worker:
-`Speed: 34266.60 addr/sec`
